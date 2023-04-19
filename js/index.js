@@ -1,5 +1,7 @@
 let navHeaderLinks = document.getElementsByClassName('nav-link');
 let buttons = document.getElementsByClassName('link-button');
+let cardsHeaders = document.getElementsByClassName('ability-title');
+
 
 const hoverLink = function(event) {
 
@@ -11,6 +13,24 @@ const hoverLink = function(event) {
         event.target.classList.add('active');
     }
     
+}
+
+const textAnimationSkill = function(event) {
+    let title = event.target;
+    let text = title.innerHTML;
+    title.style.visibility = 'hidden';
+    let i = 0;
+    function myLoop() {
+        setTimeout(function() {
+          i === 0 ? title.innerHTML = text[i] : title.innerHTML += text[i];
+          if(title.style.visibility == 'hidden') title.style.visibility = 'visible';
+          i++;
+          if (i < text.length) {
+            myLoop(); 
+          }
+        }, 100)
+      }
+    myLoop()
 }
 
 const buttonAnimation = function(event) {
@@ -38,6 +58,10 @@ for(let item of navHeaderLinks) {
 for(let button of buttons) {
     button.addEventListener('mousedown', buttonAnimation);
     button.addEventListener('mouseup', restoreButtonAnimation);
+}
+
+for(let title of cardsHeaders) {
+    title.addEventListener('mouseover', textAnimationSkill, {once: true});
 }
 
 document.addEventListener('wheel', removeAllActive);

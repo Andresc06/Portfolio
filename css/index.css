@@ -7,6 +7,10 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --background-color: #19142a;
     --text-color-1: #ffffff;
@@ -22,7 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: var(--text-color-1);
 }
 
@@ -48,7 +51,7 @@ header {
 }
 
 .classic-btn {
-    background-color: #C70039;
+    background-color: var(--button-color);
     padding: 10px 5px;
     line-height: 20px;
     font-weight: bold;
@@ -68,7 +71,6 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: var(--text-color-1);
-    text-decoration: none;
     padding: 0 1rem;
     display: flex;
     align-items: center;
@@ -103,7 +105,7 @@ header {
 #profile-img {
     width: 375px;
     border-radius: 50%;
-    animation:blur-in 0.2s linear both;
+    animation:blur-in 0.5s linear both;
     border: solid 4px var(--background-color);
 }
 
@@ -116,7 +118,7 @@ header {
     padding-left: 40px;
     width: 50%;
     text-shadow: 2px 2px 0px #000;
-    animation:blur-in 0.2s linear both;
+    animation:blur-in 0.5s linear both;
 }
 
 h1 span {
@@ -140,7 +142,7 @@ h1 span {
 }
 
 #name:hover {
-    animation:blur-in 0.2s linear both;
+    animation:blur-in 0.5s linear both;
     cursor: pointer;
 }
 
@@ -169,13 +171,11 @@ h1 span {
     border: solid 1px #000;
     box-shadow: var(--text-color-1) 0px 3px 0px;
     margin-bottom: 15px;
-    text-decoration: none;
     color: #000;
 }
 
 .button {
     color: var(--text-color-1);
-    text-decoration: none;
 }
 
 .link-button:hover {
@@ -183,6 +183,192 @@ h1 span {
     color: var(--button-color);
 }
 
+
+/* Skill Section */
+
+#skills {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/imgs/projects.jpg'); 
+    background-size: cover;
+}
+
+
+#skills h2 {
+    font-size: 4rem; 
+    padding-top: 60px;  
+    letter-spacing:1px;
+    font-family: 'Roboto';
+    font-style: italic;
+    color: var(--text-color-1);
+    text-transform:uppercase; 
+    width: 140px; 
+    margin: 0 auto;
+    text-shadow: var(--background-color) 5px 5px 2px;
+    padding-bottom:13px;
+}
+
+#skills h2:hover {
+    text-shadow: none;
+    transition: text-shadow .5s;
+}
+
+#skills h2:after {
+    width: 150px;
+    height: 4px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 5px;
+    left: 20%;
+    background-color: var(--button-color);
+}
+
+  
+.skill-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    margin-top: 8vh;
+}
+
+.ability {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    width: 20vw;
+    background-color: var(--text-color-1);
+    border: solid #000 3px;
+}
+
+.ability:hover {
+    box-shadow: 10px 10px 0px;
+    transform: translate(-2px, -2px);
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.ability lord-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0px auto 20px;
+}
+
+.ability h3 {
+    font-size: 3rem;
+    font-family: 'Shadows Into Light';
+    text-shadow: rgb(189, 189, 189) 2px 2px 0px;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+#backend h3 {
+    color: #005457;
+}
+
+.ability img {
+    width: 30px;
+}
+
+.fa-square-js, a:has(> .fa-square-js) {
+    color: #FFC300;
+}
+
+.fa-node, a:has(> .fa-node) {
+    color: #008000;
+}
+
+.fa-java, a:has(> .fa-java) {
+    color: #e11f21;
+}
+
+a#phyton-skill {
+    color: #61DAFB;
+}
+
+#frontend h3 {
+    color: #ff0058;
+}
+
+.fa-html5, a:has(> .fa-html5), .fa-git-alt, a:has(> .fa-git-alt) {
+    color: #e44d26;
+}
+
+.fa-css3-alt, a:has(> .fa-css3-alt) {
+    color: #264de4;
+}
+
+.fa-react, a:has(> .fa-react) {
+    color: #4ad5ff;
+}
+
+.fa-bootstrap, a:has(> .fa-bootstrap) {
+    color: #880afb;
+}
+
+#databases .skill-cards-content {
+    padding-top: 48px;
+}
+
+#databases h3 {
+    color: #2c6d3d;
+}
+
+#databases .skill-cards-content a:nth-child(1) {
+    color: #26779a;
+}
+
+#databases .skill-cards-content a:nth-child(2) {
+    color: #2f6792;
+}
+
+#databases .skill-cards-content a:nth-child(3) {
+    color: #4caf50;
+}
+
+#git-flow h3 {
+    color: #ffc107;
+}
+
+.skill-cards-content a span {
+    font-size: 1.25rem;
+    padding: 15.5px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 600;
+}
+
+.github, .github + span, #github-skill {
+    color: #463876;
+}
+
+.skill-cards-content a:hover, a#phyton-skill:hover {
+    font-size: 185%;
+    cursor: pointer;
+}
+
+.skill-cards-content a {
+    font-size: 1.75rem;
+    padding: 2px 15px;
+    font-family: 'Shadows Into Light';
+    font-weight:600;
+    text-align: center;
+    border-top: #000 dashed 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+section {
+    border-bottom: solid #000 5px;
+}
+
+
+#certifications, #projects {
+    height: 100vh;
+    background-color: var(--background-color);
+}
 
 @keyframes shadow-drop-bottom-right {
     
