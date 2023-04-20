@@ -1,6 +1,6 @@
 let navHeaderLinks = document.getElementsByClassName('nav-link');
 let buttons = document.getElementsByClassName('link-button');
-let cardsHeaders = document.getElementsByClassName('ability-title');
+let cardsHeaders = document.getElementsByClassName('card-title');
 
 
 const hoverLink = function(event) {

@@ -187,34 +187,34 @@ h1 span {
 /* Skill Section */
 
 #skills {
-    width: 100vw;
     height: 100vh;
     background-image: url('/imgs/projects.jpg'); 
     background-size: cover;
 }
 
-
-#skills h2 {
-    font-size: 4rem; 
+#skills h2, #certificates h2 {
     padding-top: 60px;  
     letter-spacing:1px;
     font-family: 'Roboto';
     font-style: italic;
     color: var(--text-color-1);
-    text-transform:uppercase; 
-    width: 140px; 
+    text-transform:uppercase;
     margin: 0 auto;
     text-shadow: var(--background-color) 5px 5px 2px;
     padding-bottom:13px;
 }
 
-#skills h2:hover {
+#skills-title {
+    font-size: 4rem; 
+    width: 140px; 
+}
+
+#skills h2:hover, #certificates h2:hover {
     text-shadow: none;
     transition: text-shadow .5s;
 }
 
-#skills h2:after {
-    width: 150px;
+#skills h2:after, #certificates h2:after {
     height: 4px;
     display: block;
     content: "";
@@ -224,8 +224,11 @@ h1 span {
     background-color: var(--button-color);
 }
 
-  
-.skill-cards {
+#skills-title:after {
+    width: 150px;
+}
+
+.skill-cards, .certificate-cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -234,16 +237,21 @@ h1 span {
     margin-top: 8vh;
 }
 
-.ability {
+.ability, .certificate {
     display: flex;
     border-radius: 10px;
     flex-direction: column;
-    width: 20vw;
-    background-color: var(--text-color-1);
+    background-color: rgba(255, 255, 255, 0.95);
     border: solid #000 3px;
+    justify-content: space-between;
 }
 
-.ability:hover {
+.ability {
+    min-height: 435px;
+    width: 20vw;
+}
+
+.ability:hover, .certificate:hover {
     box-shadow: 10px 10px 0px;
     transform: translate(-2px, -2px);
     transition: box-shadow 0.25s, transform 0.25s;
@@ -255,7 +263,7 @@ h1 span {
     margin: 0px auto 20px;
 }
 
-.ability h3 {
+.ability h3, .certificate h3 {
     font-size: 3rem;
     font-family: 'Shadows Into Light';
     text-shadow: rgb(189, 189, 189) 2px 2px 0px;
@@ -332,8 +340,8 @@ a#phyton-skill {
 }
 
 .skill-cards-content a span {
-    font-size: 1.25rem;
     padding: 15.5px;
+    font-size: 1.25rem;
     font-family: 'Shadows Into Light', cursive;
     font-weight: 600;
 }
@@ -345,6 +353,7 @@ a#phyton-skill {
 .skill-cards-content a:hover, a#phyton-skill:hover {
     font-size: 185%;
     cursor: pointer;
+    transition: font-size 0.25s;
 }
 
 .skill-cards-content a {
@@ -360,14 +369,117 @@ a#phyton-skill {
     gap: 12px;
 }
 
-section {
-    border-bottom: solid #000 5px;
+/* Certificates Section */
+
+#certificates {
+    background: url('/imgs/certificates.jpg') no-repeat center;
+    background-size: cover;
+    padding-bottom: 100px;
+}
+
+#certificates h2 {
+    font-size: 3rem; 
+    padding-top: 60px;  
+    letter-spacing:1px;
+    font-family: 'Roboto';
+    font-style: italic;
+    color: var(--text-color-1);
+    text-transform:uppercase;
+    margin: 0 auto;
+    text-shadow: var(--background-color) 5px 5px 2px;
+    padding-bottom:13px;
+}
+
+#certificates h2:hover {
+    text-shadow: none;
+    transition: text-shadow .5s;
+}
+
+#certificates-title {
+    font-size: 3rem; 
+    width: 320px; 
+}
+
+#certificates-title:after {
+    width: 200px;
+}
+
+.card-title:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
 }
 
 
-#certifications, #projects {
-    height: 100vh;
-    background-color: var(--background-color);
+.certificate {
+    width: 25vw;
+    min-height: 435px;
+}
+
+.certificate-cards-content {
+    padding: 2px 0px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.certificate-cards-content a {
+    border-top: #000 dashed 2px;
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.freecodecamp-links a {
+    color: var(--background-color);
+}
+
+.coursera-links a {
+    color: #0056d2;
+}
+
+.cisco-links a {
+    color: #cb101a;
+}
+
+.certificate-cards-content a span {
+    font-size: 0.8rem;
+    color: var(--background-color);
+    font-style: italic;
+}
+
+.certificate-cards-content a:hover {
+    font-size: 105%;
+    cursor: pointer;
+    transition: font-size 0.25s;
+}
+
+#coursera-title {
+    color: #0056d2;
+}
+
+#freecodecamp-title {
+    color: var(--background-color);
+}
+
+#cisco-title {
+    color: #cb101a;
+}
+
+.inst-logo {
+    width: 100px;
+    margin: 20px auto;
+}
+
+.inst-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
+section {
+    border-bottom: solid #000 5px;
+    width: 100%;
 }
 
 @keyframes shadow-drop-bottom-right {
