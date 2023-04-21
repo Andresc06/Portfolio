@@ -234,6 +234,7 @@ h1 span {
     align-items: center;
     flex-wrap: wrap;
     padding: 0 2rem;
+    gap: 25px;
     margin-top: 8vh;
 }
 
@@ -243,18 +244,20 @@ h1 span {
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.95);
     border: solid #000 3px;
+    min-width: 280px;
     justify-content: space-between;
 }
 
 .ability {
-    min-height: 435px;
+    height: 435px;
     width: 20vw;
 }
 
 .ability:hover, .certificate:hover {
     box-shadow: 10px 10px 0px;
-    transform: translate(-2px, -2px);
-    transition: box-shadow 0.25s, transform 0.25s;
+    margin-left: -2px;
+    margin-top: -2px;
+    transition: box-shadow 0.25s, margin-left 0.25s, margin-top 0.25s;
 }
 
 .ability lord-icon {
@@ -372,7 +375,7 @@ a#phyton-skill {
 /* Certificates Section */
 
 #certificates {
-    background: url('/imgs/certificates.jpg') no-repeat center;
+    background: url('/imgs/certificates-bg.png') no-repeat center;
     background-size: cover;
     padding-bottom: 100px;
 }
@@ -412,7 +415,7 @@ a#phyton-skill {
 
 .certificate {
     width: 25vw;
-    min-height: 435px;
+    height: 465px;
 }
 
 .certificate-cards-content {
@@ -480,6 +483,23 @@ a#phyton-skill {
 section {
     border-bottom: solid #000 5px;
     width: 100%;
+}
+
+.slide-in-from-left {
+    animation: 1.5s ease-out 0s 1 slideInFromLeft forwards;
+  }
+
+.hidden {
+    opacity: 0;
+}
+  
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes shadow-drop-bottom-right {
