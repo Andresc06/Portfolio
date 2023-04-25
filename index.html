@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                
+
     <title>Portfolio Page</title>
 
-    <link rel="shortcut icon" href="imgs/note.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="imgs/user.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/index.css" />
     <script
       src="https://kit.fontawesome.com/6caec21773.js"
@@ -16,188 +16,578 @@
     ></script>
   </head>
   <body>
-      <!-- Nav bar -->
-      <header>
-        <div>
-          <a id="link-logo" href="index.html"
-            ><img id="logo" src="imgs/olympic-games.png" alt="logo" /><span>
-              Andres Contreras</span
-            ></a
-          >
-        </div>
-        <nav id="nav-head">
-          <ul>
-            <li>
-              <a class="nav-link active" href="#first-container"
-                ><i class="fa-solid fa-fingerprint"></i> About me</a
+    <!-- Nav bar -->
+    <header>
+      <!-- Logo Div -->
+      <div>
+        <a id="link-logo" href="index.html"
+          ><img id="logo" src="imgs/olympic-games.png" alt="logo" /><span
+            >Andres Contreras</span
+          ></a
+        >
+      </div>
+      <!-- Links Bar -->
+      <nav id="nav-head">
+        <ul>
+          <li>
+            <a class="nav-link active" href="#first-container"
+              ><i class="fa-solid fa-fingerprint"></i> About me</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#skills"
+              ><i class="fa-solid fa-circle-nodes"></i> Skills</a
+            >
+          </li>
+          <li id="certification">
+            <a class="nav-link" href="#certificates"
+              ><i class="fa-solid fa-award"></i> Certificates</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#projects"
+              ><i class="fa-solid fa-screwdriver-wrench"></i> Projects</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#contact-me"
+              ><i class="fa-solid fa-phone"></i> Contact</a
+            >
+          </li>
+          <li>
+            <!-- Download CV Button -->
+            <button class="classic-btn">
+              <a
+                href="https://drive.google.com/file/d/1cF3RHGh-dOsmUcjTbGirv1BdD7XeqDnb/"
+                download="CV Andres Contreras"
+                ><i class="fa-regular fa-circle-down"></i>Download CV</a
               >
-            </li>
-            <li>
-              <a class="nav-link" href="#skills"
-                ><i class="fa-solid fa-circle-nodes"></i> Skills</a
-              >
-            </li>
-            <li id="certification">
-              <a class="nav-link" href="#certificates"
-                ><i class="fa-solid fa-award"></i> Certificates</a
-              >
-            </li>
-            <li>
-              <a class="nav-link" href="#projects"
-                ><i class="fa-solid fa-screwdriver-wrench"></i> Projects</a
-              >
-            </li>
-            <li>
-              <a class="nav-link" href="#contact-me"
-                ><i class="fa-solid fa-phone"></i> Contact</a
-              >
-            </li>
-            <li>
-              <button class="classic-btn">
-                <a
-                  href="https://drive.google.com/file/d/1cF3RHGh-dOsmUcjTbGirv1BdD7XeqDnb/"
-                  download="CV Andres Contreras"
-                  ><i class="fa-regular fa-circle-down"></i>Download CV</a
-                >
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <!-- First layout: About me-->
+    <!-- Main Content -->
+    <main>
+      <!-- About me Section -->
       <section id="first-container">
         <div class="presentation">
-            <h1><span id="welcome">Welcome! I'm </span><br><span id="name"> Andres Contreras</span></h1>
-            <h2>Web Developer</h2>
-            <p>
-                I'm a web developer with a passion for learning new technologies
-                and creating new projects. I'm a student of Computer Engineering and
-                also a self-learner in platforms like <em>Code Academy, FreeCodeCamp, and Coursera</em>.
-                I have developed technical skills in my area
-                as well as social and communicative skills developed by working with diverse groups 
-                and as an English Teacher.
-            </p>
-            <a class="link-button button" href="https://github.com/Andresc06" target="_blank">
+          <h1>
+            <span id="welcome">Welcome! I'm </span><br /><span id="name">
+              Andres Contreras</span
+            >
+          </h1>
+          <h2>Web Developer</h2>
+          <p>
+            I'm a web developer with a passion for learning new technologies and
+            creating new projects. I'm a student of Computer Engineering and
+            also a self-learner in platforms like
+            <em>Code Academy, FreeCodeCamp, and Coursera</em>. I have developed
+            technical skills in my area as well as social and communicative
+            skills developed by working with diverse groups and as an English
+            Teacher.
+          </p>
+          <a
+            class="link-button button"
+            href="https://github.com/Andresc06"
+            target="_blank"
+          >
             <i class="fa-brands fa-github"></i> GitHub Account
-            </a>
-            <a class="link-button button" href="https://www.linkedin.com/in/andresc06/" target="_blank">
+          </a>
+          <a
+            class="link-button button"
+            href="https://www.linkedin.com/in/andresc06/"
+            target="_blank"
+          >
             <i class="fa-brands fa-linkedin"></i> LinkedIn Account
-            </a>
+          </a>
         </div>
-          <img id="profile-img" src="imgs/andres.png" alt="" />
+        <img id="profile-img" src="imgs/andres.png" alt="" />
       </section>
 
-      <!-- Skills Section-->
+      <!-- Skills Section -->
       <section id="skills">
-
         <!-- title -->
         <h2 id="skills-title">Skills</h2>
 
         <!-- Skill Cards -->
         <div class="skill-cards">
-            <div class="ability cards hidden" id="backend">
-                <h3 class="ability-title card-title">Backend</h3>
-                <lord-icon
-                  src="https://cdn.lordicon.com/hwuyodym.json"
-                  trigger="hover"
-                  colors="primary:#005457">
-                </lord-icon>
-                <div class="skill-cards-content">
-                    <a href="https://nodejs.org/en/docs" target="_blank"><i class="fa-brands fa-node"></i> Node.js</a>
-                    
-                    <a href="https://www.javascript.com/" target="_blank"><i class="fa-brands fa-square-js"></i> Javascript</a>
-                    
-                    <a href="https://www.python.org/" target="_blank" id="phyton-skill"><img src="imgs/python.png" alt="Phyton logo"> Phyton</a>
-                
-                    <a href="https://dev.java/" target="_blank"><i class="fa-brands fa-java"></i> Java</a>
-                </div>
+          <!-- Backend Skill -->
+          <div class="ability cards hidden" id="backend">
+            <h3 class="ability-title card-title">Backend</h3>
+            <lord-icon
+              src="https://cdn.lordicon.com/hwuyodym.json"
+              trigger="hover"
+              colors="primary:#005457"
+            >
+            </lord-icon>
+            <div class="skill-cards-content">
+              <a href="https://nodejs.org/en/docs" target="_blank"
+                ><i class="fa-brands fa-node"></i> Node.js</a
+              >
+              <a href="https://www.javascript.com/" target="_blank"
+                ><i class="fa-brands fa-square-js"></i> Javascript</a
+              >
+              <a
+                href="https://www.python.org/"
+                target="_blank"
+                id="phyton-skill"
+                ><img src="imgs/python.png" alt="Phyton logo" /> Phyton</a
+              >
+              <a href="https://dev.java/" target="_blank"
+                ><i class="fa-brands fa-java"></i> Java</a
+              >
             </div>
-            <div class="ability cards hidden" id="frontend">
-                <h3 class="ability-title card-title">Frontend</h3>
-                <lord-icon
-                    src="https://cdn.lordicon.com/wluyqhxh.json"
-                    trigger="hover"
-                    colors="primary:#ff0058">
-                </lord-icon>
-                <div class="skill-cards-content">
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><i class="fa-brands fa-html5"></i> HTML5</a>
-                    
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><i class="fa-brands fa-css3-alt"></i> CSS3</a>
-                    
-                    <a href="https://reactjs.org/" target="_blank"><i class="fa-brands fa-react"></i> React</a>
-                    
-                    <a href="https://getbootstrap.com/" target="_blank"><i class="fa-brands fa-bootstrap"></i> Bootstrap</a>
-                </div>
+          </div>
+
+          <!-- Frontend Skill -->
+          <div class="ability cards hidden" id="frontend">
+            <h3 class="ability-title card-title">Frontend</h3>
+            <lord-icon
+              src="https://cdn.lordicon.com/wluyqhxh.json"
+              trigger="hover"
+              colors="primary:#ff0058"
+            >
+            </lord-icon>
+            <div class="skill-cards-content">
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                ><i class="fa-brands fa-html5"></i> HTML5</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                ><i class="fa-brands fa-css3-alt"></i> CSS3</a
+              >
+              <a href="https://reactjs.org/" target="_blank"
+                ><i class="fa-brands fa-react"></i> React</a
+              >
+              <a href="https://getbootstrap.com/" target="_blank"
+                ><i class="fa-brands fa-bootstrap"></i> Bootstrap</a
+              >
             </div>
-            <div class="ability cards hidden" id="databases">
-              <h3 class="ability-title card-title">Database</h3>
-              <lord-icon
-                  src="https://cdn.lordicon.com/eliwatfs.json"
-                  trigger="hover"
-                  colors="primary:#2c6d3d">
-              </lord-icon>          
-                <div class="skill-cards-content">
-                    <a href="https://www.postgresql.org/" target="_blank"><img src="imgs/mysql.png" alt="mySQL logo"> MySQL</a>
-                    
-                    <a href="https://www.postgresql.org/" target="_blank"><img src="imgs/postgresql.png" alt="postgreSQL logo"> PostgreSQL</a>
-                    
-                    <a href="https://www.mongodb.com/" target="_blank"><img src="imgs/mongodb.png" alt="mongoDB logo"> MongoDB</a>
-                </div>
+          </div>
+
+          <!-- Database Management Skill -->
+          <div class="ability cards hidden" id="databases">
+            <h3 class="ability-title card-title">Database</h3>
+            <lord-icon
+              src="https://cdn.lordicon.com/eliwatfs.json"
+              trigger="hover"
+              colors="primary:#2c6d3d"
+            >
+            </lord-icon>
+            <div class="skill-cards-content">
+              <a href="https://www.postgresql.org/" target="_blank"
+                ><img src="imgs/mysql.png" alt="mySQL logo" /> MySQL</a
+              >
+              <a href="https://www.postgresql.org/" target="_blank"
+                ><img src="imgs/postgresql.png" alt="postgreSQL logo" />
+                PostgreSQL</a
+              >
+              <a href="https://www.mongodb.com/" target="_blank"
+                ><img src="imgs/mongodb.png" alt="mongoDB logo" /> MongoDB</a
+              >
             </div>
-            <div class="ability cards hidden" id="git-flow">
-              <h3 class="ability-title card-title">Git Flow</h3>
-              <lord-icon
-                  src="https://cdn.lordicon.com/wxhtpnnk.json"
-                  trigger="hover"
-                  colors="primary:#ffc107">
-              </lord-icon>
-              <div class="skill-cards-content">
-                  <a href="https://git-scm.com/" target="_blank"><i class="fa-brands fa-git-alt"></i> Git <span>(Versions, Commands, Terminology)</span></a>
-                  <a href="https://github.com/" target="_blank" id="github-skill"><i class="fa-brands fa-github github"></i> Github <span>(Repositories, Pull requests)</span></a>
+          </div>
+
+          <!-- Git Flow Skill -->
+          <div class="ability cards hidden" id="git-flow">
+            <h3 class="ability-title card-title">Git Flow</h3>
+            <lord-icon
+              src="https://cdn.lordicon.com/wxhtpnnk.json"
+              trigger="hover"
+              colors="primary:#ffc107"
+            >
+            </lord-icon>
+            <div class="skill-cards-content">
+              <a href="https://git-scm.com/" target="_blank"
+                ><i class="fa-brands fa-git-alt"></i> Git
+                <span>(Versions, Commands, Terminology)</span></a
+              >
+              <a href="https://github.com/" target="_blank" id="github-skill"
+                ><i class="fa-brands fa-github github"></i> Github
+                <span>(Repositories, Pull requests)</span></a
+              >
             </div>
+          </div>
         </div>
       </section>
 
       <!-- Certificates Section-->
       <section id="certificates">
-
         <!-- title -->
         <h2 id="certificates-title">Certificates</h2>
 
         <!-- Certificates Cards -->
         <div class="certificate-cards">
-            <div class="certificate cards hidden">
-                <h3 class="institution-title card-title" id="freecode-title">FreeCodeCamp</h3>
-                <img src="/imgs/freecodecamp-logo.svg" class="inst-logo" alt="FreeCodeCamp Logo">
-                <div class="certificate-cards-content freecodecamp-links">
-                    <a href="https://www.freecodecamp.org/certification/andresc06/responsive-web-design" target="_blank">Responsive Web Design</a>
-                    <a href="https://www.freecodecamp.org/certification/andresc06/javascript-algorithms-and-data-structures" target="_blank">JavaScript Algorithms and Data Structures</a>
-                    <a href="https://www.freecodecamp.org/certification/andresc06/scientific-computing-with-python-v7" target="_blank">Scientific Computing with Python</a>
-                </div>
+          <!-- FreeCodeCamp Certificates -->
+          <div class="certificate cards hidden">
+            <h3 class="institution-title card-title" id="freecode-title">
+              FreeCodeCamp
+            </h3>
+            <img
+              src="/imgs/freecodecamp-logo.svg"
+              class="inst-logo"
+              alt="FreeCodeCamp Logo"
+            />
+            <div class="certificate-cards-content freecodecamp-links">
+              <a
+                href="https://www.freecodecamp.org/certification/andresc06/responsive-web-design"
+                target="_blank"
+                >Responsive Web Design</a
+              >
+              <a
+                href="https://www.freecodecamp.org/certification/andresc06/javascript-algorithms-and-data-structures"
+                target="_blank"
+                >JavaScript Algorithms and Data Structures</a
+              >
+              <a
+                href="https://www.freecodecamp.org/certification/andresc06/scientific-computing-with-python-v7"
+                target="_blank"
+                >Scientific Computing with Python</a
+              >
             </div>
-            <div class="certificate cards hidden">
-                <h3 class="institution-title card-title" id="coursera-title">Coursera</h3>
-                <img src="/imgs/coursera-logo.png" class="inst-logo" alt="Coursera Logo">
-                <div class="certificate-cards-content coursera-links">
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/PFVJ6H3SGZZZ" target="_blank">Web Design for Everybody Specialization by <span>University of Michigan</span></a>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/ESZXDXZS9QCD" target="_blank">HTML, CSS, and Javascript for Web Developers Course by <span>Johns Hopkins University</span></a>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/JM5X6RCNQYZJ" target="_blank">Programming for Everybody Course by <span>University of Michigan</span></a>
-                </div>
-            </div>
+          </div>
 
-            <div class="certificate cards hidden">
-              <h3 class="institution-title card-title" id="cisco-title">Cisco</h3>
-              <img src="/imgs/cisco-logo.webp" class="inst-logo" alt="Cisco Logo">
-              <div class="certificate-cards-content cisco-links">
-                <a href="https://www.credly.com/badges/006b41cd-9da4-4d00-a018-24f8c922398b?source=linked_in_profile" target="_blank">CCNA: Introduction to Networks</a>
-                <a href="https://www.credly.com/badges/347e2785-16d6-4e39-8565-0a81f562ef1c?source=linked_in_profile" target="_blank">CCNA: Switching, Routing, and Wireless Essentials</a>
-                <a href="https://www.credly.com/badges/9033cf12-6dc2-41e9-b114-b393c5e35942?source=linked_in_profile" target="_blank">CCNA: Enterprise Networking, Security, and Automation</a>
-              </div>
+          <!-- Coursera Certificates -->
+          <div class="certificate cards hidden">
+            <h3 class="institution-title card-title" id="coursera-title">
+              Coursera
+            </h3>
+            <img
+              src="/imgs/coursera-logo.png"
+              class="inst-logo"
+              alt="Coursera Logo"
+            />
+            <div class="certificate-cards-content coursera-links">
+              <a
+                href="https://www.coursera.org/account/accomplishments/specialization/PFVJ6H3SGZZZ"
+                target="_blank"
+                >Web Design for Everybody Specialization by
+                <span>University of Michigan</span></a
+              >
+              <a
+                href="https://www.coursera.org/account/accomplishments/verify/ESZXDXZS9QCD"
+                target="_blank"
+                >HTML, CSS, and Javascript for Web Developers Course by
+                <span>Johns Hopkins University</span></a
+              >
+              <a
+                href="https://www.coursera.org/account/accomplishments/verify/JM5X6RCNQYZJ"
+                target="_blank"
+                >Programming for Everybody Course by
+                <span>University of Michigan</span></a
+              >
             </div>
+          </div>
+
+          <!-- Cisco Certificates -->
+          <div class="certificate cards hidden">
+            <h3 class="institution-title card-title" id="cisco-title">Cisco</h3>
+            <img
+              src="/imgs/cisco-logo.webp"
+              class="inst-logo"
+              alt="Cisco Logo"
+            />
+            <div class="certificate-cards-content cisco-links">
+              <a
+                href="https://www.credly.com/badges/006b41cd-9da4-4d00-a018-24f8c922398b?source=linked_in_profile"
+                target="_blank"
+                >CCNA: Introduction to Networks</a
+              >
+              <a
+                href="https://www.credly.com/badges/347e2785-16d6-4e39-8565-0a81f562ef1c?source=linked_in_profile"
+                target="_blank"
+                >CCNA: Switching, Routing, and Wireless Essentials</a
+              >
+              <a
+                href="https://www.credly.com/badges/9033cf12-6dc2-41e9-b114-b393c5e35942?source=linked_in_profile"
+                target="_blank"
+                >CCNA: Enterprise Networking, Security, and Automation</a
+              >
+            </div>
+          </div>
         </div>
       </section>
-      <section id="projects">d</section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <!-- title -->
+        <h2 id="projects-title">Projects</h2>
+
+        <!-- Nav for Filtering Projects -->
+        <div class="language-divs">
+          <a
+            class="language-divs-link active-language"
+            id="all-projects"
+            data-cards="all"
+            >All</a
+          >
+          <a class="language-divs-link" id="react-phy" data-cards="react-phy"
+            >React/Phyton</a
+          >
+          <a class="language-divs-link" id="js-projects" data-cards="js"
+            >JavaScript</a
+          >
+          <a class="language-divs-link" id="html-projects" data-cards="html-css"
+            >HTML/CSS</a
+          >
+        </div>
+
+        <!-- Projects Cards -->
+        <div class="project-cards">
+          <!-- Cryptopals Project -->
+          <div class="project react-phy js" id="cryptopals">
+            <h3 class="project-title">Cryptopals Wallet</h3>
+
+            <p class="gone" id="info-cryptopals">
+              A functional Crypto Wallet done in two months with a classmate
+              where I learned about teamwork and how to work under pressure. It
+              uses <span>BINANCE API</span> to manage
+              <em style="color: #28b463">REAL money</em>.
+            </p>
+            <a
+              href="https://cryptopals-wallet.netlify.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+
+          <!-- Dungeon Tiles Project -->
+          <div class="project js" id="dungeon-tiles">
+            <h3 class="project-title">Dungeon Tiles</h3>
+
+            <p class="gone" id="info-dungeon-tiles">
+              This is a game written in JavaScript that involves moving around a
+              character in a dungeon-like environment, collecting a key, and
+              opening doors while avoiding enemies. It uses
+              <span>Canvas API</span> as base of the map engine.
+            </p>
+            <a
+              href="https://dungeon-tiles.vercel.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+
+          <!-- Whiteboard Project -->
+          <div class="project js html-css" id="whiteboard">
+            <h3 class="project-title">Whiteboard Canvas App</h3>
+
+            <p class="gone" id="info-whiteboard">
+              This is a real-time collaborative drawing app built with
+              <span>Socket.io, HTML Canvas, and Express.js</span>. Multiple
+              users can connect to the dashboard and draw simultaneously on
+              different canvases.
+            </p>
+            <a
+              href="https://github.com/Andresc06/whiteboard-project"
+              target="_blank"
+              class="project-button"
+              >Go to GitHub Repository</a
+            >
+          </div>
+
+          <!-- Chatbot Project -->
+          <div class="project js" id="chatbot">
+            <h3 class="project-title">Foo Market (Chatbot)</h3>
+
+            <p class="gone" id="info-chatbot">
+              It's a Telegram bot that allows you to buy products. It uses
+              <span>Axios, NodeMailer, Telebot, and MongoDB</span> as backend
+              and <span>Telegram API</span> as frontend.
+            </p>
+            <a
+              href="https://github.com/Andresc06/Chatbot-FooMarket"
+              target="_blank"
+              class="project-button"
+              >Go to GitHub Repository</a
+            >
+          </div>
+
+          <!-- System Market Project -->
+          <div class="project html-css" id="system-market">
+            <h3 class="project-title">System Market</h3>
+
+            <p class="gone" id="info-system-market">
+              It is a WebPage where I used different JS libraries. Here, I
+              recommend a series of technology stuff like laptops, which I
+              consider popular brands such as Lenovo, Apple, ASUS, and Hp. It
+              uses <span>Bootstrap framework</span>
+            </p>
+            <a
+              href="https://systems-market-page3.netlify.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+
+          <!-- Enterpreneurs Inc Project -->
+          <div class="project html-css" id="enterpreneurs">
+            <h3 class="project-title">Enterpreneurs Inc</h3>
+
+            <p class="gone" id="info-enterpreneurs">
+              My real first Web Page. It is a 3-in-1 Webpage where I talk about
+              Bussiness Lessons from Elon Musk as well as the bussinesses that
+              he owns. Moreover, there are bibliografies of important
+              entrepreneurs who I think are the most interesting.
+            </p>
+            <a
+              href="https://enterpreneurs-inc-page1.netlify.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+
+          <!-- Payroll Project -->
+          <div class="project js html-css" id="payroll">
+            <h3 class="project-title">Payroll Manager</h3>
+
+            <p class="gone" id="info-payroll">
+              Its principal utility is to facilitate to managers make payrolls
+              to each worker in a company. That being said, it uses a JSON as a
+              database and it's made with
+              <span>JavaScript, HTML, and CSS</span>.
+            </p>
+            <a
+              href="https://payroll-manager.vercel.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+
+          <!-- Old Portfolio Project -->
+          <div class="project html-css" id="old-portfolio">
+            <h3 class="project-title">Old Portfolio Page</h3>
+
+            <p class="gone" id="info-old-portfolio">
+              This is the Final project I made in the Course "Web Design for
+              Everybody" from Coursera. Even though, It's a old version, I'm
+              proud of my work. I made this page using my knowledge that I took
+              in Coursera, Udemy, and my years at the University.
+            </p>
+            <a
+              href="https://portfolio-page-andresc06.netlify.app/"
+              target="_blank"
+              class="project-button"
+              >Go to Web Page</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact-me">
+        
+        <!-- Title -->
+        <h2 id="contact-title">Contact Me</h2>
+
+        <div class="contact-container">
+
+          <!-- Links for my Social Media -->
+          <div class="contact-links">
+            <h3>My Contact Links</h3>
+            <nav class="nav-contact">
+              <a href="tel:+13462641335" class="contact-link"
+                ><i class="fa-solid fa-phone-volume fa-xs"></i>
+                +1-346-264-1335</a
+              >
+              <a
+                href="https://github.com/Andresc06"
+                id="profile-link"
+                class="contact-link"
+                target="_blank"
+                ><i class="fab fa-github"></i> Git Hub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/andresc06/"
+                class="contact-link"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> Linkedin</a
+              >
+              <a
+                href="https://twitter.com/andresc_066"
+                class="contact-link"
+                target="_blank"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+              <a href="https://wa.me/13462641335" class="contact-link"
+                ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
+              >
+            </nav>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="form-part">
+            <h3>Drop a Line</h3>
+            <form action="/" method="post" class="contact-form">
+              <div class="name-group">
+                <label for="name-input">Name</label>
+                <input
+                  type="text"
+                  id="name-input"
+                  placeholder="Name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="email-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="phone-group">
+                <label for="phone">Phone</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="Phone"
+                  name="phone"
+                  required
+                />
+              </div>
+              <div class="location-group">
+                <label for="location">Location</label>
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Location"
+                  name="location"
+                  required
+                />
+              </div>
+              <div class="message-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  name="message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <button type="submit" class="classic-btn button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <!-- Copyright -->
+      <p class="footer-copyright">© 2023 Copyright Andres Contreras</p>
+    </footer>
   </body>
   <script src="js/index.js"></script>
 </html>
