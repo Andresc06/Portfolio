@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=KoHo:ital@0;1&family=Lobster+Two&family=Roboto:ital,wght@0,100;0,400;1,100&family=Shadows+Into+Light&display=swap');
 
+
+/* GENERAL RULES */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +19,8 @@ a {
     --text-color-1: #ffffff;
     --button-color: #C70039;
 }
+
+/* HEADER */
 
 #logo {
     width: 25%;
@@ -85,6 +90,8 @@ header {
     color: var(--button-color) !important;
 }
 
+/* BLUR ANIMATION */
+
 @keyframes blur-in{
     
     0%{filter:blur(12px);opacity:0}
@@ -92,6 +99,8 @@ header {
     100%{filter:blur(0);opacity:1}
 
 }
+
+/* ABOUT ME SECTION */
 
 #first-container {
     padding-top: 8vh;
@@ -184,7 +193,7 @@ h1 span {
 }
 
 
-/* Skill Section */
+/* SKILL SECTION */
 
 #skills {
     height: 100vh;
@@ -192,7 +201,7 @@ h1 span {
     background-size: cover;
 }
 
-#skills h2, #certificates h2 {
+#skills h2, #certificates h2, #projects h2, .contact-section h2 {
     padding-top: 60px;  
     letter-spacing:1px;
     font-family: 'Roboto';
@@ -209,12 +218,12 @@ h1 span {
     width: 140px; 
 }
 
-#skills h2:hover, #certificates h2:hover {
+#skills h2:hover, #certificates h2:hover, #projects h2:hover, .contact-section h2:hover {
     text-shadow: none;
     transition: text-shadow .5s;
 }
 
-#skills h2:after, #certificates h2:after {
+#skills h2:after, #certificates h2:after, #projects h2:after, .contact-section h2:after {
     height: 4px;
     display: block;
     content: "";
@@ -228,7 +237,7 @@ h1 span {
     width: 150px;
 }
 
-.skill-cards, .certificate-cards {
+.skill-cards, .certificate-cards, .project-cards {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -372,7 +381,7 @@ a#phyton-skill {
     gap: 12px;
 }
 
-/* Certificates Section */
+/* CERTIFICATE SECTION */
 
 #certificates {
     background: url('/imgs/certificates-bg.png') no-repeat center;
@@ -393,11 +402,6 @@ a#phyton-skill {
     padding-bottom:13px;
 }
 
-#certificates h2:hover {
-    text-shadow: none;
-    transition: text-shadow .5s;
-}
-
 #certificates-title {
     font-size: 3rem; 
     width: 320px; 
@@ -411,7 +415,6 @@ a#phyton-skill {
     transform: scale(1.1);
     transition: transform 0.25s;
 }
-
 
 .certificate {
     width: 25vw;
@@ -480,10 +483,336 @@ a#phyton-skill {
     transition: transform 0.25s;
 }
 
+.card-title {
+    cursor: pointer;
+}
+
+/* PROJECT SECTION */
+
+#projects {
+    padding-bottom: 50px;
+    background-color: #110d1c;
+}
+
+#projects-title {
+    font-size: 3rem; 
+    width: 250px; 
+}
+
+#projects-title:after {
+    width: 135px;
+}
+
+.language-divs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.language-divs-link {
+    background-color: var(--button-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    font-family: 'KoHo', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.active-language {
+    background-color: var(--background-color);
+    color: var(--text-color-1);
+}
+
+.project {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: var(--button-color) solid 3px;
+    height: 24vw;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    width: 24vw;
+    color: var(--text-color-1);
+    cursor: pointer;
+    text-shadow: #000 4px 4px 4px;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    border: var(--text-color-1) solid 3px;
+}
+
+.project h3 {
+    font-size: 2rem;
+    font-family: 'KoHo', sans-serif;
+}
+
+.project-button {
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    font-family: 'KoHo', sans-serif;
+    color: var(--text-color-1);
+    border-radius: 20px;
+}
+
+.project p {
+    width: 85%;
+    text-align: center;
+}
+
+
+/* PROJECT CARDS BACKGROUND ANIMATION */
+
+.project span {
+    color:#FFC300;
+}
+
+#cryptopals  {
+    background-image: url('/imgs/projects-preview/cryptopals.png');
+    background-size: cover;
+}
+
+#cryptopals:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/cryptopals.png');
+}
+
+#dungeon-tiles  {
+    background-image: url('/imgs/projects-preview/dungeon-tiles.png');
+    background-size: cover;
+}
+
+#dungeon-tiles:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/dungeon-tiles.png');
+}
+
+#whiteboard {
+    background-image: url('/imgs/projects-preview/whiteboard.png');
+    background-size: cover;
+}
+
+#whiteboard:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/whiteboard.png');
+}
+
+#chatbot {
+    background-image: url('/imgs/projects-preview/foo.jpg');
+    background-size: cover;
+}
+
+#chatbot:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/foo.jpg');
+}
+
+#system-market {
+    background-image: url('/imgs/projects-preview/system-market.png');
+    background-size: cover;
+}
+
+#system-market:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/system-market.png');
+}
+
+#enterpreneurs {
+    background-image: url('/imgs/projects-preview/enterpreneurs.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+#enterpreneurs:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/enterpreneurs.avif');
+}
+
+#payroll {
+    background-image: url('/imgs/projects-preview/payroll.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#payroll:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/payroll.png');
+}
+
+#old-portfolio {
+    background-image: url('/imgs/projects-preview/portfolio.jpg');
+    background-size: cover;
+}
+
+#old-portfolio:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/imgs/projects-preview/portfolio.jpg');
+}
+
+.gone {
+    display: none;
+}
+
 section {
     border-bottom: solid #000 5px;
     width: 100%;
 }
+
+/* CONTACT SECTION */
+
+/* CONTACT FORM */
+
+.name-group {
+    grid-area: name;
+}
+
+.email-group {
+    grid-area: email;
+}
+
+.message-group {
+    grid-area: message;
+}
+
+.phone-group {
+    grid-area: phone;
+}
+
+.location-group {
+    grid-area: location;
+}
+
+.contact-section {
+    background-color: #0e0920;
+    color: var(--text-color-1);
+    padding: 20px;
+}
+
+#contact-title {
+    font-size: 3rem; 
+    width: 320px; 
+}
+
+#contact-title:after {
+    width: 150px;
+}
+
+.contact-form input, .contact-form textarea {
+    display: block;
+    padding: 1rem;
+    margin: 1em 0;
+    resize: none;
+    background-color: transparent;
+    color: var(--text-color-1);
+    border: 2px solid var(--text-color-1);
+    border-radius: 5px;
+}
+
+.contact-form input, .contact-form input::placeholder {
+    width:360px;
+    color: var(--text-color-1);
+}
+
+.contact-form textarea, .contact-form textarea::placeholder {
+    width: 100%;
+    color: var(--text-color-1);
+}
+
+.contact-form {
+    display: grid;
+    font-size: 120%;
+    grid-template-areas: 
+    "name email"
+    "phone location"
+    "message message"
+    "button button";
+    gap: 20px;
+    margin: 20px;
+}
+
+/* CONTACT LINKS */
+
+.contact-links a {
+    display: block;
+}
+
+.contact-form button {
+    grid-area: button;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 100px;
+}
+
+.fa-github, .fa-linkedin, .fa-twitter, .fa-mobile-alt {
+    margin-right: 10px;
+}
+
+.contact-link:first-child {
+    font-size: 170%;
+    font-style: italic;
+}
+
+.contact-link:nth-child(2):hover {
+    transition: color .3s;
+    color: #1b1b1b;
+}
+
+.contact-link:nth-child(3):hover {
+    transition: color .3s;
+    color: #0e76a8;
+}
+
+.contact-link:nth-child(4):hover {
+    transition: color .3s;
+    color: #00acee;
+}
+
+.contact-link:nth-child(5):hover {
+    transition: color .3s;
+    color: #229954;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 180%;
+    text-shadow: 3px 3px 1px black;
+    font-family: "KoHo";
+}
+
+.contact-section h3 {
+    font-size: 2rem;
+    font-family: 'Shadows Into Light', sans-serif;
+    text-shadow: #000 2px 2px 2px;
+    font-style: italic;
+    text-align: center;
+    margin: 60px;
+}
+
+.nav-contact {
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    line-height: 10vh;
+}
+
+/*FOOTER*/
+
+.page-footer {
+    background-color: #000;
+    padding: 10px;
+}
+  
+
+.footer-copyright {
+    font-size: 150%;
+    color: #fff;
+    font-family: 'Shadows Into Light';
+    text-align: center;
+}
+
 
 .slide-in-from-left {
     animation: 1.5s ease-out 0s 1 slideInFromLeft forwards;
@@ -492,6 +821,8 @@ section {
 .hidden {
     opacity: 0;
 }
+
+/* SLIDE ANIMATION FOR CARDS*/
   
 @keyframes slideInFromLeft {
     0% {
@@ -501,6 +832,8 @@ section {
         transform: translateX(0);
     }
 }
+
+/* SHADOW FOR CARDS */
 
 @keyframes shadow-drop-bottom-right {
     
@@ -512,6 +845,8 @@ section {
         border: solid 1px #000;
     }
 }
+
+/* MEDIA QUERIES */
 
 @media (min-width: 392px) and (max-width: 768px) {
 
