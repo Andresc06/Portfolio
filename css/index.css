@@ -50,7 +50,7 @@ header {
     left: 0;
     padding: 0 2rem;
     width: 100%;
-    height: 8vh;
+    height: fit-content;
     background-color: var(--background-color);
     color: var(--text-color-1);
 }
@@ -196,7 +196,7 @@ h1 span {
 /* SKILL SECTION */
 
 #skills {
-    height: 100vh;
+    padding: 8vh 0;
     background-image: url('/imgs/projects.jpg'); 
     background-size: cover;
 }
@@ -573,6 +573,7 @@ a#phyton-skill {
 
 #cryptopals  {
     background-image: url('/imgs/projects-preview/cryptopals.png');
+    background-position: center;
     background-size: cover;
 }
 
@@ -581,6 +582,7 @@ a#phyton-skill {
 }
 
 #dungeon-tiles  {
+    background-position: center;
     background-image: url('/imgs/projects-preview/dungeon-tiles.png');
     background-size: cover;
 }
@@ -590,6 +592,7 @@ a#phyton-skill {
 }
 
 #whiteboard {
+    background-position: center;
     background-image: url('/imgs/projects-preview/whiteboard.png');
     background-size: cover;
 }
@@ -599,6 +602,7 @@ a#phyton-skill {
 }
 
 #chatbot {
+    background-position: center;
     background-image: url('/imgs/projects-preview/foo.jpg');
     background-size: cover;
 }
@@ -608,6 +612,7 @@ a#phyton-skill {
 }
 
 #system-market {
+    background-position: center;
     background-image: url('/imgs/projects-preview/system-market.png');
     background-size: cover;
 }
@@ -617,6 +622,7 @@ a#phyton-skill {
 }
 
 #enterpreneurs {
+    background-position: center;
     background-image: url('/imgs/projects-preview/enterpreneurs.avif');
     background-size: cover;
     background-position: center;
@@ -637,6 +643,7 @@ a#phyton-skill {
 }
 
 #old-portfolio {
+    background-position: center;
     background-image: url('/imgs/projects-preview/portfolio.jpg');
     background-size: cover;
 }
@@ -705,7 +712,7 @@ section {
 }
 
 .contact-form input, .contact-form input::placeholder {
-    width:360px;
+    width: 100%;
     color: var(--text-color-1);
 }
 
@@ -726,14 +733,14 @@ section {
     margin: 20px;
 }
 
+.contact-form button {
+    grid-area: button;
+}
+
 /* CONTACT LINKS */
 
 .contact-links a {
     display: block;
-}
-
-.contact-form button {
-    grid-area: button;
 }
 
 .contact-container {
@@ -848,11 +855,23 @@ section {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 392px) and (max-width: 768px) {
+@media (min-width: 392px) and (max-width: 768px) and (orientation: landscape) {
+
+
+    /* HEADER */
 
     header {
-        font-size: 65%;
+        font-size: 60%;
         padding: 2px 1rem;
+        height: fit-content;
+    }
+
+    .nav-link i {
+        display: none;
+    }
+
+    .fa-circle-down {
+        display: none;
     }
 
     #link-logo > span {
@@ -871,9 +890,132 @@ section {
         padding: 0.05rem 0.15rem;
     }
 
+    /* ABOUT ME SECTION */
+
+    #first-container {
+        height: fit-content;
+        flex-direction: column;
+        padding-top: 16vh;
+    }
+
+    .presentation {
+        width: 90%;
+    }
+
+    #profile-img {
+        margin: 40px;
+    }
+
+    .link-button {
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    /* SKILL SECTION */
+
+    #certificates, #skills {
+        height: fit-content;
+        padding: 40px;
+    }
+
+    .ability, .certificate {
+        width: 20vw;
+        height: 50vw;
+    }
+
+    .skill-cards-content a {
+        font-size: 120%;
+    }
+
+    .ability lord-icon {
+        width: 220px;
+        height: 220px;
+    }
+
+    .skill-cards-content a span {
+        padding: 10.5px;
+        font-size: 1.2rem;
+    }
+
+    .skill-cards-content a:hover, a#phyton-skill:hover {
+        font-size: 150%;
+    }
+
+    /* CERTIFICATE SECTION */
+
+    .certificate-cards-content a {
+        font-size: 100%;
+        text-align: center;
+    }
+
+    .certificate {
+        height: 75vw;
+    }
+
+    .certificate img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* PROJECT SECTION */
+
+    .project-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding: 80px;
+    }
+
+    .project {
+        flex: auto;
+        width: 40vw;
+        height: 50vw;
+    }
+    
+    .project h3 {
+        font-size: 2.5rem;
+    }
+    
+    .project-button, .project p {
+        font-size: 120%;
+    }
+
+    /* CONTACT SECTION */
+    
+    .contact-links a {
+        display: inline-block;
+    }
+
+    .contact-link {
+        font-size: 180%;
+    }
+
+    .contact-link:first-child {
+        font-size: 155%;
+        font-style: normal;
+        display: block;
+    }
+
+    /* CONTACT FORM */
+
+    .contact-form {
+        margin: 0px;
+    }
+
+    .contact-form button {
+        width: 40%;
+        padding: 10px 5px;
+        margin: 0 auto;
+    }
+
 }
 
-@media (max-width: 391px) {
+@media (min-width: 392px) and (max-width: 768px) and (orientation: portrait) {
+
+
+    /* HEADER */
 
     .logo {
         display: none;
@@ -886,7 +1028,167 @@ section {
     header {
         flex-direction: column;
         position: static;
-        font-size: 75%;
+        padding: 1rem 0;
+        height: fit-content;
+        justify-content: center;
+        border-bottom: solid 4px #000;
+    }
+
+    #nav-head ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    #nav-head ul li {
+        padding: 2rem;
+        font-size: 150%;
+    }
+
+    #nav-head button {
+        padding: 1.5rem 0.5rem;
+        font-size: 80%;
+    }
+
+    /* ABOUT ME SECTION */
+
+    #first-container {
+        height: fit-content;
+        flex-direction: column;
+        padding-top: 16vh;
+    }
+
+    .presentation {
+        width: 90%;
+        padding-left: 0px;
+    }
+
+    #profile-img {
+        margin: 40px;
+    }
+
+    .link-button {
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    /* SKILL SECTION */
+
+    #certificates, #skills {
+        height: fit-content;
+        padding: 40px;
+    }
+
+    .ability, .certificate {
+        width: 50vw;
+        height: 70vh;
+    }
+
+    .skill-cards-content a {
+        font-size: 200%;
+    }
+
+    .ability lord-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skill-cards-content a:hover, a#phyton-skill:hover {
+        font-size: 210%;
+    }
+
+    /* CERTIFICATE SECTION */
+
+    .certificate {
+        height: fit-content;
+    }
+
+    .certificate-cards-content a {
+        font-size: 140%;
+        text-align: center;
+    }
+
+    .certificate img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* PROJECT SECTION */
+
+    .language-divs {
+        flex-direction: column;
+    }
+
+    .language-divs-link {
+        width: 200px;
+        text-align: center;
+    }
+
+    .project {
+        flex: auto;
+        width: 50vw;
+        height: 70vh;
+    }
+    
+    .project h3 {
+        font-size: 3rem;
+    }
+    
+    .project-button, .project p {
+        font-size: 140%;
+    }
+
+    /* CONTACT SECTION */
+    
+    .contact-links a {
+        display: inline-block;
+    }
+
+    .contact-link {
+        font-size: 180%;
+    }
+
+    .contact-link:first-child {
+        font-size: 155%;
+        font-style: normal;
+        display: block;
+    }
+
+    /* CONTACT FORM */
+
+    .contact-form {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input {
+        width: 90vw;
+    }
+
+    .contact-form button {
+        width: 40%;
+        padding: 10px 5px;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 392px) {
+
+    .logo {
+        display: none;
+    }
+
+    .classic-btn {
+        padding: 0.05rem 0.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        position: static;
         padding: 1rem 0;
         height: fit-content;
         justify-content: center;
@@ -898,15 +1200,13 @@ section {
     }
 
     #nav-head ul li a {
-        padding: 0.5rem 0;
+        margin: 0.5rem 0;
     }
 
     #nav-head ul {
         height: fit-content;
-    }
-
-    #nav-head ul li a i {
-        display: none;
+        flex-direction: column;
+        padding: 0.5rem;
     }
 
     #first-container {
@@ -914,7 +1214,152 @@ section {
         height: fit-content;
     }
 
-    #nav-head ul {
+    /* ABOUT ME SECTION */
+
+    #first-container {
+        height: fit-content;
         flex-direction: column;
+        padding-top: 16vh;
+    }
+
+    .presentation {
+        width: 90%;
+        padding-left: 0;
+    }
+
+    #profile-img {
+        width: 80vw;
+        margin: 40px auto;
+    }
+
+    .presentation p {
+        font-size: 1.2rem;
+    }
+
+    .link-button {
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin-right: 40px;
+    }
+
+    /* SKILL SECTION */
+
+    #skills-title {
+        font-size: 4rem; 
+        width: 200px; 
+    }
+    
+    #skills-title:after {
+        width: 100px;
+    }
+
+    #certificates, #skills {
+        height: fit-content;
+        padding: 40px;
+    }
+
+    .ability, .certificate {
+        width: 50vw;
+    }
+
+    .skill-cards-content a {
+        font-size: 200%;
+    }
+
+    .ability lord-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skill-cards-content a span {
+        padding: 11.5px;
+        font-size: 1.2rem;
+    }
+
+    .skill-cards-content a:hover, a#phyton-skill:hover {
+        font-size: 210%;
+    }
+
+    /* CERTIFICATE SECTION */
+
+    .certificate-cards-content a {
+        font-size: 100%;
+        text-align: center;
+    }
+
+    .certificate {
+        height: fit-content;
+    }
+
+    .certificate img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* PROJECT SECTION */
+
+    .language-divs {
+        flex-direction: column;
+    }
+    
+    .language-divs-link {
+        width: 200px;
+        text-align: center;
+    }
+
+    .project-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .project {
+        flex: auto;
+        width: 80vw;
+        height: 60vh;
+    }
+    
+    .project h3 {
+        font-size: 2rem;
+    }
+    
+    .project-button, .project p {
+        font-size: 115%;
+    }
+
+    /* CONTACT SECTION */
+    
+    .contact-links a {
+        display: inline-block;
+    }
+
+    .contact-link {
+        font-size: 180%;
+    }
+
+    .contact-link:first-child {
+        font-size: 155%;
+        font-style: normal;
+        display: block;
+    }
+
+    /* CONTACT FORM */
+
+    .contact-container {
+        margin: 0;
+    }
+
+    .contact-form {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form button {
+        width: 40%;
+        padding: 10px 5px;
+        margin: 0 auto;
     }
 }
