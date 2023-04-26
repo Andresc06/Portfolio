@@ -8,7 +8,6 @@ const LANGUAGE_DIVS = document.getElementsByClassName('language-divs-link');
 const LANGUAGE_CARDS = Array.from(document.getElementsByClassName('react-phy')).concat(Array.from(document.getElementsByClassName('js'))).concat(Array.from(document.getElementsByClassName('html-css')));
 const PROJECT_CARDS = document.getElementsByClassName('project');
 
-
 // Functions for the different events
 
 // Function to handle the animation when the user select a link section in the header
@@ -124,7 +123,9 @@ for(let item of NAV_HEADER_LINKS) {
 // Add event listener to each button
 for(let button of BUTTONS) {
     button.addEventListener('mousedown', buttonAnimation);
+    button.addEventListener('touchstart', buttonAnimation);
     button.addEventListener('mouseup', restoreButtonAnimation);
+    button.addEventListener('touchend', restoreButtonAnimation);
 }
 
 // Add event listener to each title in the skills section
@@ -180,3 +181,14 @@ document.addEventListener('wheel', removeAllActive);
     init();
     checkPosition();
 })();
+
+// Function to change the trigger of lord icons when the user is in a mobile device
+/* Storing user's device details in a variable*/
+let details = navigator.userAgent;
+    
+/* Creating a regular expression containing some mobile devices keywords to search it in details string*/
+let regexp = /android|iphone|kindle|ipad/i;
+
+/* Using test() method to search regexp in details it returns boolean value*/
+let isMobileDevice = regexp.test(details);
+
