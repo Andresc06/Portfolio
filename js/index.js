@@ -149,8 +149,9 @@ for(let project of PROJECT_CARDS) {
   project.addEventListener('mouseleave', hideInfoCards);
 }
 
-// Add event listener to the document to remove the active class from all the header links when the user scroll
+// Add event listener to the document to remove the active class from all the header links when the user scroll and touch screen
 document.addEventListener('wheel', removeAllActive);
+document.addEventListener('touchstart', removeAllActive);
 
 // Add event listener to the document to do the cards animation (slide) when the card is in the viewport
 (() => {
